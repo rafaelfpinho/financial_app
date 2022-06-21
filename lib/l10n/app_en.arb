@@ -1,0 +1,8 @@
+{
+  "logo": "My Financial App",
+  "login": "Login",
+  "email": "E-mail",
+  "password": "Password",
+  "register": "Sign up",
+  "loginScreenRegisterAlert": "New user?"
+}

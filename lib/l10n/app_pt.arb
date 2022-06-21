@@ -1,0 +1,7 @@
+{
+  "login": "Login",
+  "email": "E-mail",
+  "password": "Senha",
+  "register": "Registre-se",
+  "loginScreenRegisterAlert": "Novo por aqui?"
+}
