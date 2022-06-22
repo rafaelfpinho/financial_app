@@ -3,6 +3,10 @@
   "login": "Login",
   "email": "E-mail",
   "password": "Password",
-  "register": "Sign up",
+  "comfirmPassword": "Comfirm password",
+  "name": "Name",
+  "dateOfBirth": "Date of birth",
+  "signUp": "Sign up",
+  "register": "Register",
   "loginScreenRegisterAlert": "New user?"
 }

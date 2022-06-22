@@ -2,6 +2,10 @@
   "login": "Login",
   "email": "E-mail",
   "password": "Senha",
-  "register": "Registre-se",
+  "comfirmPassword": "Comfirmar senha",
+  "name": "Nome completo",
+  "dateOfBirth": "Data de nascimento",
+  "signUp": "Registre-se",
+  "register": "Registrar",
   "loginScreenRegisterAlert": "Novo por aqui?"
 }

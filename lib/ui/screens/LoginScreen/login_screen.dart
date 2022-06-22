@@ -56,9 +56,7 @@ class _EmailField extends StatelessWidget {
             fontSize: 16, fontWeight:
             FontWeight.w700
         ),
-        onChanged: (email)
-    =>
-    {
+        onChanged: (email) => {
       print("email changed: $email")
     });
   }
@@ -120,7 +118,7 @@ class _RegisterButton extends StatelessWidget {
               child: Text(
                 AppLocalizations
                     .of(context)
-                    .register,
+                    .signUp,
                 style:
                 TextStyle(color: Colors.blueAccent),
               ))
