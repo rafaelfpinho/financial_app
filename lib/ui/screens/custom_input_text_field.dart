@@ -77,52 +77,46 @@ class _CustomInputTextFieldState extends State<CustomInputTextField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Material(
-          color: Colors.green,
-          child: Text(
-            widget.title,
-            style:
-            const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-          ),
+        Text(
+          widget.title,
+          style: widget.style ?? const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
         ),
         const SizedBox(height: 6),
-        Material(
-          borderRadius: BorderRadius.circular(4),
-            child: TextFormField(
-              // inputFormatters:
-              // widget.mask != null ? [TextInputMask(mask: widget.mask)] : null,
-              controller: widget.controller,
-              keyboardType: widget.textInputType,
-              enabled: widget.enabled,
-              maxLength: widget.maxLength,
-              decoration: InputDecoration(
-                  filled: !_focused || !widget.enabled,
-                  fillColor: Colors.grey.shade300,
-                  prefixIcon: widget.prefixIcon,
-                  suffixIcon: widget.suffixIcon,
-                  // errorBorder: _errorBorder,
-                  // focusedErrorBorder: _errorBorder,
-                  // enabledBorder: _enabledBorder,
-                  // focusedBorder: _focusedBorder,
-                  // disabledBorder: _enabledBorder,
-                  errorText: widget.error,
-                  counter: widget.counter,
-                  counterText: widget.counter == null ? "" : widget.counterText,
-                  hintText: widget.hintText
-              ),
-              obscureText: widget.obscureText,
-              onChanged: widget.onChanged,
-              focusNode: _focus,
-              readOnly: widget.readOnly ?? false,
-              initialValue: widget.initialValue,
-              style: (Theme.of(context).brightness == Brightness.dark
-                  && (!_focused || !widget.enabled))
-                  ? const TextStyle(color: Colors.black87)
-                  : widget.style,
-              textCapitalization: widget.textCapitalization,
-              onFieldSubmitted: (value) {
-              },
-            ))
+        TextFormField(
+          // inputFormatters:
+          // widget.mask != null ? [TextInputMask(mask: widget.mask)] : null,
+          controller: widget.controller,
+          keyboardType: widget.textInputType,
+          enabled: widget.enabled,
+          maxLength: widget.maxLength,
+          decoration: InputDecoration(
+              filled: !_focused || !widget.enabled,
+              fillColor: Colors.grey.shade300,
+              prefixIcon: widget.prefixIcon,
+              suffixIcon: widget.suffixIcon,
+              // errorBorder: _errorBorder,
+              // focusedErrorBorder: _errorBorder,
+              // enabledBorder: _enabledBorder,
+              // focusedBorder: _focusedBorder,
+              // disabledBorder: _enabledBorder,
+              errorText: widget.error,
+              counter: widget.counter,
+              counterText: widget.counter == null ? "" : widget.counterText,
+              hintText: widget.hintText
+          ),
+          obscureText: widget.obscureText,
+          onChanged: widget.onChanged,
+          focusNode: _focus,
+          readOnly: widget.readOnly ?? false,
+          initialValue: widget.initialValue,
+          style: (Theme.of(context).brightness == Brightness.dark
+              && (!_focused || !widget.enabled))
+              ? const TextStyle(color: Colors.black87)
+              : null,
+          textCapitalization: widget.textCapitalization,
+          onFieldSubmitted: (value) {
+          },
+        )
       ],
     );
   }

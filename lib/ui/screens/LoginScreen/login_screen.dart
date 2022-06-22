@@ -17,13 +17,11 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Container(
-        color: Colors.green,
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-      ),
-      Padding(
+    return Scaffold(
+      backgroundColor: Theme
+          .of(context)
+          .backgroundColor,
+      body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -40,8 +38,8 @@ class _LoginScreenState extends State<LoginScreen> {
             _RegisterButton(),
           ],
         ),
-      )
-    ]);
+      ),
+    );
   }
 }
 
@@ -49,9 +47,20 @@ class _EmailField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomInputTextField(
-        title: AppLocalizations.of(context).email,
+        title: AppLocalizations
+            .of(context)
+            .email,
         textInputType: TextInputType.emailAddress,
-        onChanged: (email) => {print("email changed: $email")});
+        style: const TextStyle(
+            color: Colors.white,
+            fontSize: 16, fontWeight:
+            FontWeight.w700
+        ),
+        onChanged: (email)
+    =>
+    {
+      print("email changed: $email")
+    });
   }
 }
 
@@ -59,8 +68,15 @@ class _PasswordField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomInputTextField(
-        title: AppLocalizations.of(context).password,
+        title: AppLocalizations
+            .of(context)
+            .password,
         textInputType: TextInputType.text,
+        style: const TextStyle(
+            color: Colors.white,
+            fontSize: 16, fontWeight:
+        FontWeight.w700
+        ),
         obscureText: true,
         onChanged: (password) => {print("password changed: $password")});
   }
@@ -74,7 +90,10 @@ class _LoginButton extends StatelessWidget {
       height: 48,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       onPressed: () => {Navigator.of(context).pushNamed(HomeScreen.routeName)},
-      child: Text(AppLocalizations.of(context).login),
+      child: Text(AppLocalizations
+          .of(context)
+          .login),
+      textColor: Colors.white,
     );
   }
 }
@@ -84,28 +103,28 @@ class _RegisterButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Material(
-        textStyle: const TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w400
-        ),
-        color: Colors.green,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(AppLocalizations.of(context).loginScreenRegisterAlert),
-            const SizedBox(width: 4),
-            GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushNamed(SignUpScreen.routeName);
-                },
-                child: Text(
-                  AppLocalizations.of(context).register,
-                  style:
-                      TextStyle(color: Colors.black),
-                ))
-          ],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(AppLocalizations
+              .of(context)
+              .loginScreenRegisterAlert,
+            style: const TextStyle(
+                color: Colors.white
+            ),),
+          const SizedBox(width: 4),
+          GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed(SignUpScreen.routeName);
+              },
+              child: Text(
+                AppLocalizations
+                    .of(context)
+                    .register,
+                style:
+                TextStyle(color: Colors.blueAccent),
+              ))
+        ],
       ),
     );
   }
