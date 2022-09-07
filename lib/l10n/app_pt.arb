@@ -7,5 +7,6 @@
   "dateOfBirth": "Data de nascimento",
   "signUp": "Registre-se",
   "register": "Registrar",
-  "loginScreenRegisterAlert": "Novo por aqui?"
+  "loginScreenRegisterAlert": "Novo por aqui?",
+  "forgotPassword": "Esqueci minha senha"
 }

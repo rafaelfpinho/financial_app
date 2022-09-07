@@ -8,5 +8,6 @@
   "dateOfBirth": "Date of birth",
   "signUp": "Sign up",
   "register": "Register",
-  "loginScreenRegisterAlert": "New user?"
+  "loginScreenRegisterAlert": "New user?",
+  "forgotPassword": "Forgot my password"
 }
