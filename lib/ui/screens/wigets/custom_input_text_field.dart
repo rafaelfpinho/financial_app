@@ -46,7 +46,8 @@ class CustomInputTextField extends StatefulWidget {
       : super(key: key);
 
   @override
-  _CustomInputTextFieldState createState() => _CustomInputTextFieldState();
+  _CustomInputTextFieldState createState() =>
+      _CustomInputTextFieldState();
 }
 
 class _CustomInputTextFieldState extends State<CustomInputTextField> {

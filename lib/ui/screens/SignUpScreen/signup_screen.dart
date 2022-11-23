@@ -1,4 +1,4 @@
-import 'package:financial_app/ui/screens/custom_input_text_field.dart';
+import 'package:financial_app/ui/screens/wigets/custom_input_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -104,9 +104,9 @@ class _RegisterButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      color: Colors.blueAccent,
+      color: Theme.of(context).primaryColor,
       height: 48,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       onPressed: () => {Navigator.of(context).pop()},
       child: Text(AppLocalizations.of(context).register),
       textColor: Colors.white,
